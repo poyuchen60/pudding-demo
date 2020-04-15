@@ -1,0 +1,39 @@
+.container {
+  display: flex;
+  overflow: auto;
+  align-items: flex-start;
+}
+
+.side {
+  width: 240px;
+  overflow: hidden;
+  border-right: 1px solid rgba(0, 0, 0, 0.2);
+  flex-shrink: 0;
+  min-height: calc(100vh - 60px);
+  transition: width 0.2s;
+}
+
+.side h2 {
+  padding-left: 20px;
+}
+
+.main {
+  padding: 8px 20px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.main span {
+  display: none;
+  padding: 1px 10px 0 0;
+}
+
+@media screen and (max-width: 480px) {
+  .side {
+    width: 0;
+    flex-grow: 1;
+  }
+  .main span {
+    display: block;
+  }
+}
